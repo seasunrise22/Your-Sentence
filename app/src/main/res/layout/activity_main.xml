@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.leecompany.yoursentence.MainActivity">
+
+    <!-- 문구 입력 -->
+    <LinearLayout
+        android:id="@+id/setTextLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/setText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="잠금화면에 표시할 텍스트를 입력하세요." />
+
+    </LinearLayout>
+
+    <!-- 폰트 선택 -->
+    <LinearLayout
+        android:id="@+id/setFontLayout"
+        android:orientation="vertical"
+        android:layout_below="@id/setTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subject02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="폰트"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/fontGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/font01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:padding="5dp"
+                android:text="기본적"
+                android:textStyle="bold"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/font02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="진지한"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/font03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="동글이"
+                android:textSize="16dp" />
+
+            <RadioButton
+                android:id="@+id/font04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="손글씨"
+                android:textSize="16dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- 폰트 사이즈 설정 -->
+    <LinearLayout
+        android:id="@+id/setFontSizeLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/setFontLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subject03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="폰트 사이즈"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/sizeMinus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/setSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="24"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/sizePlus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 폰트 색상 설정 -->
+    <LinearLayout
+        android:id="@+id/setFontColorLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/setFontSizeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subject04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="폰트 색상"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/colorLayout"
+            android:background="#EAEAEA"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/color01"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#FF0000" />
+
+                <TextView
+                    android:id="@+id/color02"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#FFBB00" />
+
+                <TextView
+                    android:id="@+id/color03"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#ABF200" />
+
+                <TextView
+                    android:id="@+id/color04"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#0054FF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선택 된 색상" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/color05"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#FFB2D9" />
+
+                <TextView
+                    android:id="@+id/color06"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#FFE400" />
+
+                <TextView
+                    android:id="@+id/color07"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/color08"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/color09"
+                    android:layout_margin="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#000000" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <!-- 텍스트 출력 위치 선택 -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/setFontColorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subject05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="텍스트 출력 위치"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/setTextGroup"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/setTextTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:text="상단출력"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/setTextBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:text="하단출력"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:checked="true"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- 설정완료 버튼 -->
+    <Button
+        android:id="@+id/setBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:text="설정완료"
+        android:textSize="30dp" />
+
+</RelativeLayout>
