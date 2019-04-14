@@ -12,5 +12,5 @@
 - Language : Java
 
 ## Screenshots
-![01](https://user-images.githubusercontent.com/45503931/56092554-76d3c080-5ef8-11e9-891f-c0a08f342072.png)
-![02](https://user-images.githubusercontent.com/45503931/56092555-776c5700-5ef8-11e9-8ce7-e553b281440b.png)
+![resize_01](https://user-images.githubusercontent.com/45503931/56092562-99fe7000-5ef8-11e9-96af-e486960320f5.png)
+![resize_02](https://user-images.githubusercontent.com/45503931/56092564-99fe7000-5ef8-11e9-8aec-90b2678485fd.png)
