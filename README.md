@@ -32,6 +32,7 @@ mSetBtn.setOnClickListener(new View.OnClickListener() {
         startService(mSIntent);
         }
     });
+```
     
 ***BroadcastReceiver와 IntentFilter를 이용한 잠금화면 감지***     
 ```java
