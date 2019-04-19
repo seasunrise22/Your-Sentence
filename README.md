@@ -32,8 +32,29 @@ mSetBtn.setOnClickListener(new View.OnClickListener() {
         startService(mSIntent);
         }
     });
-```
+    
+***BroadcastReceiver와 IntentFilter를 이용한 잠금화면 감지***     
+```java
+public class LockScreenStateReceiver extends BroadcastReceiver {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+    if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+        if(!isShowing) {
+            mWindowManager.addView(setTextView, mParams);
+            isShowing = true;
+            }
+        }
 
+        else if(intent.getAction().equals(Intent.ACTION_USER_PRESENT)) {
+            if(isShowing) {
+                mWindowManager.removeViewImmediate(setTextView);
+                isShowing = false;
+            }
+        }
+    }
+}
+```
+    
 ## Screenshots
 ![resize_01](https://user-images.githubusercontent.com/45503931/56092562-99fe7000-5ef8-11e9-96af-e486960320f5.png)
 ![resize_02](https://user-images.githubusercontent.com/45503931/56092564-99fe7000-5ef8-11e9-8aec-90b2678485fd.png)
