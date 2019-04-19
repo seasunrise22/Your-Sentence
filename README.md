@@ -15,23 +15,23 @@
 ***Intent에 정보를 담아 서비스 실행***
 ```java
 // 설정완료 버튼 눌렀을 때
-        mSetBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "설정되었습니다!", Toast.LENGTH_LONG).show();
+mSetBtn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getApplicationContext(), "설정되었습니다!", Toast.LENGTH_LONG).show();
 
-                fontSize = Integer.parseInt(mSetSize.getText().toString());
+        fontSize = Integer.parseInt(mSetSize.getText().toString());
 
-                Intent mSIntent = new Intent(MainActivity.this, LockScreenTextService.class);
-                mSIntent.putExtra("userSetText", mSetText.getText().toString());
-                mSIntent.putExtra("userSetFont", fontNum);
-                mSIntent.putExtra("userSetSize", fontSize);
-                mSIntent.putExtra("userSetColor", colorIdx);
-                mSIntent.putExtra("userSetPosition", textPosition);
+        Intent mSIntent = new Intent(MainActivity.this, LockScreenTextService.class);
+        mSIntent.putExtra("userSetText", mSetText.getText().toString());
+        mSIntent.putExtra("userSetFont", fontNum);
+        mSIntent.putExtra("userSetSize", fontSize);
+        mSIntent.putExtra("userSetColor", colorIdx);
+        mSIntent.putExtra("userSetPosition", textPosition);
 
-                startService(mSIntent);
-            }
-        });
+        startService(mSIntent);
+        }
+    });
 ```
 
 ## Screenshots
