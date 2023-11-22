@@ -10,7 +10,6 @@
 ## Development Environment
 - IDE : Android Studio
 - Language : Java
-- 
 ## Screenshots
 ![resize_01](https://user-images.githubusercontent.com/45503931/56092562-99fe7000-5ef8-11e9-96af-e486960320f5.png)
 ![resize_02](https://user-images.githubusercontent.com/45503931/56092564-99fe7000-5ef8-11e9-8aec-90b2678485fd.png)
